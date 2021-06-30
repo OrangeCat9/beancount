@@ -12,20 +12,6 @@ py_test(
 )
 
 py_library(
-    name = "csv_utils",
-    srcs = ["csv_utils.py"],
-)
-
-py_test(
-    name = "csv_utils_test",
-    srcs = ["csv_utils_test.py"],
-    deps = [
-        ":csv_utils",
-        ":test_utils",
-    ],
-)
-
-py_library(
     name = "date_utils",
     srcs = ["date_utils.py"],
     deps = [],
@@ -184,19 +170,6 @@ py_test(
 )
 
 py_library(
-    name = "text_utils",
-    srcs = ["text_utils.py"],
-)
-
-py_test(
-    name = "text_utils_test",
-    srcs = ["text_utils_test.py"],
-    deps = [
-        ":text_utils",
-    ],
-)
-
-py_library(
     name = "table",
     srcs = ["table.py"],
 )
@@ -206,22 +179,5 @@ py_test(
     srcs = ["table_test.py"],
     deps = [
         ":table",
-    ],
-)
-
-py_library(
-    name = "scrape",
-    srcs = ["scrape.py"],
-    deps = [
-        # Add lxml here?
-    ],
-)
-
-py_test(
-    name = "scrape_test",
-    srcs = ["scrape_test.py"],
-    deps = [
-        ":test_utils",
-        ":scrape",
     ],
 )
